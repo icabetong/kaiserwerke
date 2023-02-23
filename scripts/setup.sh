@@ -18,3 +18,7 @@ flatpak install $FLATPAK_APPS
 # setup git
 git config --global user.name "Isaiah Collins Abetong"
 git config --global user.email "isaiahcollins_02@live.com"
+
+# setup oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+chsh -s $(which zsh)
