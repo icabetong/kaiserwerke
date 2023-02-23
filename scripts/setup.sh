@@ -1,6 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 APT_APPS="deluge vlc gparted piper zsh"
 FLATPAK_APPS="com.authy.Authy com.bitwarden.desktop com.getpostman.Postman com.spotify.Client com.viber.Viber"
+
+if [ "$EUID" -ne 0 ]
+  then echo -e "\nThis script needs to run with root privileges.\nExiting..."
+  exit
+fi
 
 # first update apt-sources then
 # upgrade the current packages
