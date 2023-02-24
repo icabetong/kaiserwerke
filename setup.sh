@@ -42,3 +42,11 @@ chsh -s $(which zsh)
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 source ~/.zshrc
+
+# copy CaskaydiaCove Nerd font to the fonts dir
+cp fonts/*.ttf ~/.local/share/fonts/ 
+
+# copy the zsh dot file to the home folder
+cp dot/.zshrc ~/
+
+echo -e "\nOperation Completed\nPlease reboot the system."
